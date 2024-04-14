@@ -2,30 +2,20 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="bg-gray-300 h-screen flex items-center justify-center p-5">
-      <div className="bg-white w-full shadow-lg p-5 rounded-2xl">
-        <div className="flex justify-between items-center">
-          <div className="flex flex-col">
-            <span className="text-gray-600 font-semibold -mb-1">In Transit</span>
-            <span className="text-4xl font-semibold">Coolblue</span>
-            <div className="w-12 h-12 size12 bg-orange-400"></div>
-          </div>
-          <div className="my-2 flex items-center gap-2">
-            <span className="bg-green-400 text-white uppercase px-2.5 py-1.5 text-xs font-medium rounded-full">TODAYt</span>
-            <span> 9:30-10:30</span>
-          </div>
-          <div className="relative">
-            <div className="bg-gray-400 absolute w-full h-2 rounded-full"></div>
-            <div className="bg-green-400 absolute w-3/4 h-2 rounded-full"></div>
-          </div>
-          <div className="flex justify-between items-center mt-5 text-gray-600">
-            <span>Expected</span>
-            <span>Sorting center</span>
-            <span>In transit</span>
-            <span className="text-gray-400">Delivered</span>
-          </div>
+    <div className="flex flex-col items-center justify-between min-h-screen p-6">
+      <div className="my-auto flex flex-col items-center gap-2 *:font-mdeium">
+        <span className="text-9xl"></span>
+        <h1 className="text-4xl">당근</h1>
+        <h2 className="text-2xl">당근 마켓에 어서오세요!</h2>
+      </div>
+      <div className="flex flex-col items-center gap-3 w-full">
+        <Link href="/create-account" className="w-full bg-orange-500 text-white text-lg font-medium py-2.5 rounded-md text-center
+        hover:bg-orange-400 transition-colors">시작하기</Link>
+        <div className="flex gap-2">
+          <span>이미 계정이 있나요?</span>
+          <Link href="/login" className="hover:underline">로그인</Link>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
